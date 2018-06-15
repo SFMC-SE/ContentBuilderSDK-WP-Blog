@@ -1,0 +1,18 @@
+{
+  "name": "cb-wordpress",
+  "version": "0.0.1",
+  "description": "Content Builder SDK app to simulate DAM integration",
+  "author": "Tyler Vickers & Aaron Cates",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.5.2",
+    "blocksdk": "^1.0.0",
+    "ejs": "^2.5.6",
+    "express": "4.13.3",
+    "request": "^2.87.0",
+    "underscore": "^1.9.0"
+  }
+}
