@@ -33,7 +33,7 @@
         <div class="slds-media__body">
           <h2>
           <a class="slds-card__header-link slds-truncate">
-            <span class="slds-text-heading_large">Wordpress CMS</span>
+            <span class="slds-text-heading_large">Wordpress Blog</span>
           </a>
         </h2>
         </div>
@@ -42,100 +42,65 @@
   </div>
   <!-- /block header -->
   <div id="block-container">
-    <div class="slds-text-heading_medium">Image Configuration</div>
+    <!-- title & returned results -->
+    <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-size_6-of-12">
+        <div id="blog-selection-title" class="slds-text-heading_medium">Blog Selection</div>
+      </div>
+      <div class="slds-col slds-size_6-of-12">
+        <div id="blog-counts" class="slds-text-heading_medium slds-text-align_right slds-text-color_success">Retrieving Blog Categories...</div>
+      </div>
+    </div>
+    <!-- /title & returned results -->
     <br />
-    <!-- image link -->
+    <!-- blog category filters -->
     <div class="slds-form-element">
-      <label class="slds-form-element__label" for="image-link">Image Link</label>
+      <label class="slds-form-element__label" for="blog-categories">Select Blog Category</label>
       <div class="slds-form-element__control">
-        <input type="text" id="image-link" class="slds-input" placeholder="Optional URL for link wrap" />
-      </div>
-    </div>
-    <!-- /image link -->
-    </br>
-    <!-- image width -->
-    <div class="slds-form-element">
-      <label class="slds-form-element__label" for="slider-image-width">
-                <span class="slds-slider-label">
-          <span class="slds-slider-label__label">Image Width</span>
-                </span>
-            </label>
-      <div class="slds-form-element__control">
-        <div class="slds-slider">
-          <input type="range" id="slider-image-width" class="slds-slider__range" value="300" min="100" max="800" />
-          <span class="slds-slider__value" id="slider-image-width-val" aria-hidden="true">300</span>
+        <div class="slds-select_container">
+          <select class="slds-select" id="blog-categories">
+                        <option value="">Please select</option>
+                    </select>
         </div>
       </div>
     </div>
-    <!-- /image width -->
-    </br>
-    <!-- image height -->
-    <div class="slds-form-element">
-      <label class="slds-form-element__label" for="slider-image-height">
-                <span class="slds-slider-label">
-          <span class="slds-slider-label__label">Image Height</span>
-                </span>
-            </label>
+    <!-- /blog category filters -->
+    <br />
+    <!-- returned blogs -->
+    <div class="slds-form-element" id="blog-element">
+      <label class="slds-form-element__label" for="blogs">Select Blog</label>
       <div class="slds-form-element__control">
-        <div class="slds-slider">
-          <input type="range" id="slider-image-height" class="slds-slider__range" value="300" min="100" max="800" />
-          <span class="slds-slider__value" id="slider-image-height-val" aria-hidden="true">300</span>
+        <div class="slds-select_container">
+          <select class="slds-select" id="blogs">
+                        <option value="">Please select</option>
+                    </select>
         </div>
       </div>
     </div>
-    <!-- /image height -->
-    </br>
-    <div class="slds-grid slds-gutters">
-      <div class="slds-col slds-size_1-of-3">
-        <!-- scale to fit -->
-        <div>
-          <form id="image-scale">
+    <!-- /returned blogs -->
+    <br />
+    <!-- button alignment -->
+    <div class="slds-form-element">
+          <form id="button-alignment">
             <fieldset class="slds-form-element">
-              <legend class="slds-form-element__legend slds-form-element__label">Scale to Fit</legend>
+              <legend class="slds-form-element__legend slds-form-element__label">Button Alignment</legend>
               <div class="slds-form-element__control">
                 <div class="slds-radio_button-group">
                   <span class="slds-button slds-radio_button">
-            <input type="radio" name="scale" id="scale-yes" value="yes" />
-            <label class="slds-radio_button__label" for="scale-yes">
-              <span class="slds-radio_faux">Yes</span>
-                  </label>
-                  </span>
-                  <span class="slds-button slds-radio_button">
-            <input type="radio" name="scale" id="scale-no" value="no" checked="checked"/>
-            <label class="slds-radio_button__label" for="scale-no">
-              <span class="slds-radio_faux">No</span>
-                  </label>
-                  </span>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-        <!-- /scale to fit -->
-      </div>
-      <div class="slds-col slds-size_2-of-3">
-        <!-- /image alignment -->
-        <div>
-          <form id="image-alignment">
-            <fieldset class="slds-form-element">
-              <legend class="slds-form-element__legend slds-form-element__label">Image Alignment</legend>
-              <div class="slds-form-element__control">
-                <div class="slds-radio_button-group">
-                  <span class="slds-button slds-radio_button">
-        <input type="radio" name="alignment" id="image-left" value="left" />
-        <label class="slds-radio_button__label" for="image-left">
+        <input type="radio" name="alignment" id="button-left" value="left" />
+        <label class="slds-radio_button__label" for="button-left">
           <span class="slds-radio_faux">Left</span>
                   </label>
                   </span>
                   <span class="slds-button slds-radio_button">
-        <input type="radio" name="alignment" id="image-center" value="center" checked="checked"/>
-        <label class="slds-radio_button__label" for="image-center">
+        <input type="radio" name="alignment" id="button-center" value="center" checked="checked"/>
+        <label class="slds-radio_button__label" for="button-center">
           <span class="slds-radio_faux">Center</span>
                   </label>
                   </span>
                   <span class="slds-button slds-radio_button">
-        <input type="radio" name="alignment" id="image-right" value="right" />
-        <label class="slds-radio_button__label" for="image-right">
+        <input type="radio" name="alignment" id="button-right" value="right" />
+        <label class="slds-radio_button__label" for="button-right">
           <span class="slds-radio_faux">Right</span>
                   </label>
                   </span>
@@ -143,37 +108,10 @@
               </div>
             </fieldset>
           </form>
-        </div>
-        <!-- /image alignment -->
-      </div>
     </div>
-    <hr />
-    <div class="slds-grid slds-wrap">
-      <div class="slds-col slds-size_6-of-12">
-        <div id="image-selection-title" class="slds-text-heading_medium">Image Selection</div>
-      </div>
-      <div class="slds-col slds-size_6-of-12">
-        <div id="image-selection-count" class="slds-text-heading_medium slds-text-align_right slds-text-color_success"></div>
-      </div>
+        <!-- /button alignment -->
+
     </div>
-    <br />
-    <!-- image filters -->
-    <div class="slds-form-element">
-      <label class="slds-form-element__label" for="image-filter">Select Image Category</label>
-      <div class="slds-form-element__control">
-        <div class="slds-select_container">
-          <select class="slds-select" id="image-filter">
-                        <option value="">Please select</option>
-                    </select>
-        </div>
-      </div>
-    </div>
-    <!-- /image filters -->
-    <!-- returned images -->
-    <div class="zoom" id="cms-images">
-    </div>
-  </div>
-  <!-- /returned images -->
   <script src="javascript/blocksdk.js"></script>
   <script src="javascript/main.js"></script>
   <!--    <script src="main.js"></script> -->
