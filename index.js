@@ -15,7 +15,9 @@ app.listen(app.get('port'), function() {
 
 app.get('/', function(req, res){
 	var apiurl = process.env.wpendpoint || "https://wordpress.imhlabs.com/wp-json/wp/v2/";
+  var appName = process.env.appName || "Content Builder SDK - Wordpress Blog";
 	res.render('pages/index',{
-		"apiurl" : apiurl
+		"apiurl" : apiurl,
+    "appName" : appName
 	});
 });
