@@ -1,0 +1,30 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack ./src/main.js public/main.js"
+  },
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.5",
+    "@salesforce-mc/blocksdk": "git+ssh://git@github.exacttarget.com:ContentPublic/blocksdk.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

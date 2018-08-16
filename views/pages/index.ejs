@@ -14,15 +14,18 @@
     var wpEndPoint = '<%= apiurl %>';
     var appName = '<%= appName %>';
   </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114173005-3"></script>
   <script>
+      var expertsUrl = '/projects/cbsdk/wordpressblog'; //EDIT THIS FOR YOUR PROJECT
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114173005-2"></script>
+  <script>
+    expertsUrl += window.location.pathname;
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'UA-114173005-3', {
-      'page_title' : '<%= appName %>'
+    gtag('config', 'UA-114173005-2',{
+      'page_path': expertsUrl
     });
   </script>
   <style>
